@@ -1,75 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Página web vista en computadora y en celular">
-  <defs>
-    <clipPath id="heroImg"><rect x="290" y="126" width="168" height="110" rx="8"/></clipPath>
-    <clipPath id="phoneImg"><rect x="496" y="236" width="88" height="60" rx="6"/></clipPath>
-  </defs>
   <rect width="640" height="480" fill="#e9edf4"/>
-  <circle cx="570" cy="60" r="95" fill="#dde3ec"/>
-  <circle cx="60" cy="430" r="70" fill="#dde3ec"/>
 
-  <!-- Laptop -->
-  <rect x="70" y="70" width="420" height="276" rx="16" fill="#14284b"/>
-  <rect x="84" y="84" width="392" height="248" rx="6" fill="#ffffff"/>
-  <path d="M40 346h480l-18 24H58z" fill="#14284b"/>
-  <rect x="250" y="346" width="60" height="6" rx="3" fill="#4f5d76"/>
+  <!-- Computadora -->
+  <rect x="60" y="80" width="430" height="280" rx="18" fill="#14284b"/>
+  <rect x="76" y="96" width="398" height="248" rx="8" fill="#ffffff"/>
+  <path d="M30 360h490l-20 26H50z" fill="#14284b"/>
 
-  <!-- Sitio: menú -->
-  <circle cx="106" cy="104" r="8" fill="#14284b"/>
-  <rect x="120" y="100" width="44" height="8" rx="4" fill="#14284b"/>
-  <rect x="318" y="101" width="28" height="6" rx="3" fill="#c3cbd9"/>
-  <rect x="354" y="101" width="28" height="6" rx="3" fill="#c3cbd9"/>
-  <rect x="390" y="101" width="28" height="6" rx="3" fill="#c3cbd9"/>
-  <rect x="426" y="96" width="34" height="16" rx="4" fill="#14284b"/>
-
-  <!-- Sitio: portada -->
-  <rect x="100" y="134" width="170" height="14" rx="4" fill="#14284b"/>
-  <rect x="100" y="154" width="130" height="14" rx="4" fill="#14284b"/>
-  <rect x="100" y="180" width="160" height="6" rx="3" fill="#c3cbd9"/>
-  <rect x="100" y="192" width="140" height="6" rx="3" fill="#c3cbd9"/>
-  <rect x="100" y="210" width="74" height="22" rx="5" fill="#14284b"/>
-  <rect x="114" y="219" width="46" height="4" rx="2" fill="#ffffff"/>
-  <rect x="290" y="126" width="168" height="110" rx="8" fill="#e9edf4"/>
-  <g clip-path="url(#heroImg)">
-    <circle cx="425" cy="152" r="12" fill="#c3cbd9"/>
-    <path d="M280 240l55-58 36 32 30-24 70 50z" fill="#14284b"/>
-  </g>
-
-  <!-- Sitio: tarjetas -->
-  <g fill="#f4f6fa" stroke="#dde3ec" stroke-width="1.5">
-    <rect x="100" y="252" width="114" height="64" rx="8"/>
-    <rect x="223" y="252" width="114" height="64" rx="8"/>
-    <rect x="346" y="252" width="114" height="64" rx="8"/>
-  </g>
-  <g fill="#14284b">
-    <circle cx="118" cy="270" r="7"/><circle cx="241" cy="270" r="7"/><circle cx="364" cy="270" r="7"/>
-    <rect x="112" y="285" width="60" height="6" rx="3"/><rect x="235" y="285" width="60" height="6" rx="3"/><rect x="358" y="285" width="60" height="6" rx="3"/>
-  </g>
-  <g fill="#c3cbd9">
-    <rect x="112" y="297" width="84" height="5" rx="2.5"/><rect x="235" y="297" width="84" height="5" rx="2.5"/><rect x="358" y="297" width="84" height="5" rx="2.5"/>
-  </g>
-
-  <!-- Cursor -->
-  <path d="M160 222v28l7-7 6 12 6-3-6-12h10z" fill="#14284b" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Sitio -->
+  <rect x="100" y="124" width="190" height="18" rx="6" fill="#14284b"/>
+  <rect x="100" y="152" width="140" height="18" rx="6" fill="#14284b"/>
+  <rect x="100" y="196" width="96" height="30" rx="8" fill="#14284b"/>
+  <rect x="306" y="120" width="146" height="196" rx="12" fill="#e9edf4"/>
+  <rect x="100" y="250" width="188" height="66" rx="12" fill="#e9edf4"/>
 
   <!-- Celular -->
-  <rect x="478" y="160" width="124" height="240" rx="20" fill="#14284b"/>
-  <rect x="486" y="172" width="108" height="216" rx="13" fill="#ffffff"/>
-  <rect x="526" y="164" width="28" height="4" rx="2" fill="#4f5d76"/>
-  <circle cx="499" cy="188" r="5" fill="#14284b"/>
-  <rect x="566" y="184" width="16" height="2.5" rx="1.25" fill="#14284b"/>
-  <rect x="566" y="190" width="16" height="2.5" rx="1.25" fill="#14284b"/>
-  <rect x="496" y="204" width="80" height="9" rx="3" fill="#14284b"/>
-  <rect x="496" y="217" width="58" height="9" rx="3" fill="#14284b"/>
-  <rect x="496" y="236" width="88" height="60" rx="6" fill="#e9edf4"/>
-  <g clip-path="url(#phoneImg)"><path d="M490 300l30-32 20 18 16-13 34 27z" fill="#14284b"/></g>
-  <rect x="496" y="306" width="56" height="16" rx="4" fill="#14284b"/>
-  <rect x="496" y="332" width="88" height="44" rx="6" fill="#f4f6fa" stroke="#dde3ec" stroke-width="1.5"/>
-  <rect x="504" y="342" width="44" height="5" rx="2.5" fill="#14284b"/>
-  <rect x="504" y="353" width="66" height="4" rx="2" fill="#c3cbd9"/>
-
-  <!-- Insignia de código -->
-  <g transform="translate(36 52)">
-    <rect width="80" height="46" rx="23" fill="#ffffff"/>
-    <path d="M28 15l-9 8 9 8M52 15l9 8-9 8M44 11l-8 24" stroke="#14284b" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+  <rect x="470" y="150" width="140" height="260" rx="24" fill="#14284b"/>
+  <rect x="480" y="164" width="120" height="232" rx="16" fill="#ffffff"/>
+  <rect x="494" y="184" width="80" height="12" rx="6" fill="#14284b"/>
+  <rect x="494" y="210" width="92" height="110" rx="10" fill="#e9edf4"/>
+  <rect x="494" y="334" width="60" height="22" rx="7" fill="#14284b"/>
 </svg>

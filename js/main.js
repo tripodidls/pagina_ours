@@ -56,7 +56,6 @@ form.addEventListener("submit", (e) => {
   const nombre = form.nombre.value.trim();
   const negocio = form.negocio.value.trim();
   const servicios = checked("servicios");
-  const actual = checked("actual");
   const plazo = form.plazo.value;
   const mensaje = form.mensaje.value.trim();
 
@@ -73,7 +72,6 @@ form.addEventListener("submit", (e) => {
     `¡Hola! Soy ${nombre} y quiero pedir un presupuesto personalizado.`,
     negocio && `• Mi emprendimiento: ${negocio}`,
     `• Estoy buscando: ${servicios.join(", ")}`,
-    actual.length && `• Hoy tengo: ${actual.join(", ")}`,
     plazo && `• Lo necesito: ${plazo}`,
     mensaje && `\n${mensaje}`,
   ].filter(Boolean);
@@ -85,7 +83,6 @@ form.addEventListener("submit", (e) => {
    EFECTOS AL DESLIZAR
    ========================================================= */
 const hero = document.querySelector(".hero");
-const progress = document.querySelector(".progress");
 const parallaxEls = [...document.querySelectorAll("[data-parallax]")];
 
 // Guarda la posición original de cada elemento con parallax
@@ -106,8 +103,6 @@ const onScroll = () => {
 
   header.classList.toggle("scrolled", y > 40);
 
-  const max = document.documentElement.scrollHeight - vh;
-  progress.style.setProperty("--progress", max > 0 ? (y / max).toFixed(4) : 0);
 
   if (reduceMotion) return;
 
@@ -193,7 +188,7 @@ ideaNodes.forEach((node) => {
 
 /* ---------- Animaciones de aparición ---------- */
 const revealTargets = document.querySelectorAll(
-  ".section-label, .section-head, .service-text, .custom-intro, .custom-card, .steps li, .faq details, .contact-info, .contact-form, .cta-inner"
+  ".section-head, .service-text, .custom-intro, .custom-card, .steps li, .faq details, .contact-info, .contact-form, .cta-inner"
 );
 
 if ("IntersectionObserver" in window && !reduceMotion) {
