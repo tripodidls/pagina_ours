@@ -8,17 +8,20 @@
   <meta property="og:title" content="Estudio Nova | Páginas web, redes e identidad de marca">
   <meta property="og:description" content="Hacemos que tu marca se vea profesional en todos lados: web, Instagram e identidad visual.">
   <meta property="og:type" content="website">
+  <meta name="theme-color" content="#14284b">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+  <div class="progress" aria-hidden="true"></div>
+
   <!-- ============ ENCABEZADO ============ -->
-  <header class="header" id="inicio">
-    <nav class="nav container">
+  <header class="header">
+    <nav class="nav container" aria-label="Principal">
       <a href="#inicio" class="logo" aria-label="Estudio Nova, inicio">
         <span class="logo-mark">N</span>
         <span class="logo-text">Estudio Nova</span>
@@ -29,80 +32,153 @@
       </button>
 
       <ul class="nav-links" id="menu">
-        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#ideas">Ideas</a></li>
+        <li><a href="#web">Web</a></li>
+        <li><a href="#redes">Redes</a></li>
+        <li><a href="#marca">Marca</a></li>
         <li><a href="#paquetes">Paquetes</a></li>
-        <li><a href="#proceso">Cómo trabajamos</a></li>
-        <li><a href="#preguntas">Preguntas</a></li>
         <li><a href="#contacto" class="btn btn-small">Pedí tu presupuesto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="eyebrow">Diseño · Web · Redes</p>
-          <h1>Tu marca, lista para <em>crecer</em> en internet.</h1>
-          <p class="lead">
-            Creamos páginas web, contenido para Instagram e identidad visual
-            para emprendimientos, pequeñas y medianas empresas. Todo en un mismo lugar,
-            con un estilo coherente y profesional.
-          </p>
-          <div class="hero-actions">
-            <a href="#contacto" class="btn">Quiero mi presupuesto</a>
-            <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
-          </div>
-          <ul class="hero-points">
-            <li>Presupuesto sin cargo</li>
-            <li>Diseños 100% a medida</li>
-            <li>Atención personalizada</li>
-          </ul>
-        </div>
+    <!-- ============ PORTADA ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-word" aria-hidden="true">MARCA</div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="mock mock-browser">
-            <div class="mock-bar"><span></span><span></span><span></span></div>
-            <div class="mock-body">
-              <div class="mock-line w60"></div>
-              <div class="mock-line w40"></div>
-              <div class="mock-block"></div>
-              <div class="mock-cols"><div></div><div></div><div></div></div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow eyebrow-light hero-eyebrow">Estudio de diseño · Web · Redes · Branding</p>
+          <h1 class="hero-title">
+            <span class="line" style="--d:-1;--i:0"><span class="line-inner">Tu marca,</span></span>
+            <span class="line" style="--d:1;--i:1"><span class="line-inner">lista para</span></span>
+            <span class="line line-outline" style="--d:-1;--i:2"><span class="line-inner">crecer.</span></span>
+          </h1>
+          <div class="hero-copy">
+            <p class="hero-lead">
+              Páginas web, contenido para Instagram e identidad visual para
+              emprendimientos, pequeñas y medianas empresas. Todo en un mismo lugar.
+            </p>
+            <div class="hero-actions">
+              <a href="#contacto" class="btn btn-light">Quiero mi presupuesto</a>
+              <a href="#ideas" class="btn btn-outline-light">Explorar servicios</a>
             </div>
           </div>
-          <div class="mock mock-phone">
-            <div class="mock-post"></div>
-            <div class="mock-post alt"></div>
-            <div class="mock-post"></div>
-            <div class="mock-post alt"></div>
+        </div>
+
+        <!-- Escena ilustrada: cada capa se mueve a distinta velocidad al deslizar -->
+        <div class="hero-scene" aria-hidden="true">
+          <div class="layer l-browser" style="--s:-70">
+            <div class="browser">
+              <div class="browser-bar"><span></span><span></span><span></span></div>
+              <div class="browser-body">
+                <div class="b-line w55"></div>
+                <div class="b-line w35 light"></div>
+                <div class="b-block"><span></span><span></span></div>
+                <div class="b-cols"><div></div><div></div><div></div></div>
+              </div>
+            </div>
           </div>
-          <div class="mock mock-palette">
-            <span style="background:#1f2a44"></span>
-            <span style="background:#ff6b4a"></span>
-            <span style="background:#ffc857"></span>
-            <span style="background:#f6efe6"></span>
+
+          <div class="layer l-phone" style="--s:-200">
+            <div class="phone">
+              <div class="phone-head"><i></i><b></b></div>
+              <span></span><span class="alt"></span><span></span>
+              <span class="alt"></span><span class="play"></span><span class="alt"></span>
+              <span></span><span class="alt"></span><span></span>
+            </div>
           </div>
+
+          <div class="layer l-type" style="--s:-130">
+            <div class="type-card"><strong>Aa</strong><small>Tipografía</small></div>
+          </div>
+
+          <div class="layer l-like" style="--s:-300">
+            <div class="like-pill">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-10.6A4.6 4.6 0 0 1 12 7.6a4.6 4.6 0 0 1 8 2.8C20 15.8 12 21 12 21z"/></svg>
+              <span>+1.248</span>
+            </div>
+          </div>
+
+          <div class="layer l-swatch" style="--s:-250">
+            <div class="swatch-pill"><i></i><i class="w"></i><span>Paleta</span></div>
+          </div>
+
+          <div class="layer l-logo" style="--s:-160">
+            <div class="logo-tile">N</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#ideas" class="scroll-cue" aria-label="Deslizá para ver más">
+        <span>Deslizá</span><i></i>
+      </a>
+    </section>
+
+    <!-- ============ CINTA EN MOVIMIENTO ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span class="marquee-item">Páginas web</span>
+          <span class="marquee-item">Reels</span>
+          <span class="marquee-item">Logos</span>
+          <span class="marquee-item">Instagram</span>
+          <span class="marquee-item">Paleta de colores</span>
+          <span class="marquee-item">Tiendas online</span>
+          <span class="marquee-item">Tipografías</span>
+          <span class="marquee-item">Identidad de marca</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ LLUVIA DE IDEAS ============ -->
+    <section class="section ideas" id="ideas">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Lluvia de ideas</p>
+          <h2>¿Qué necesita tu marca hoy?</h2>
+          <p>Tocá una idea y te llevamos directo a esa sección.</p>
+        </div>
+
+        <nav class="mindmap" aria-label="Mapa de servicios">
+          <svg class="mindmap-lines" aria-hidden="true"></svg>
+
+          <div class="node node-center" style="--x:50%;--y:46%;--mx:50%;--my:58%;--i:0"><span>Tu marca</span></div>
+
+          <a class="node node-lg" href="#web" style="--x:17%;--y:24%;--mx:30%;--my:10%;--i:1">
+            <span><i class="node-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="14" rx="2"/><path d="M2.5 8h19M8 21h8M12 18v3"/></svg></i><b>Páginas web</b><small>Sitios, tiendas y landing pages</small></span>
+          </a>
+          <a class="node node-lg" href="#redes" style="--x:83%;--y:24%;--mx:70%;--my:30%;--i:2">
+            <span><i class="node-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></i><b>Contenido para redes</b><small>Imágenes y reels para Instagram</small></span>
+          </a>
+          <a class="node node-lg" href="#marca" style="--x:50%;--y:92%;--mx:50%;--my:92%;--i:3">
+            <span><i class="node-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.8-.9 1.8-1.8 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8Z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></svg></i><b>Identidad de marca</b><small>Logo, colores y tipografías</small></span>
+          </a>
+        </nav>
+
+        <div class="mindmap-actions">
+          <a href="#proceso" class="btn btn-ghost">Cómo trabajamos</a>
+          <a href="#contacto" class="btn">Pedí tu presupuesto</a>
         </div>
       </div>
     </section>
 
-    <!-- ============ SERVICIOS ============ -->
-    <section class="section" id="servicios">
+    <!-- ============ 01 PÁGINAS WEB ============ -->
+    <section class="section service section-dark" id="web">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Servicios</p>
-          <h2>Todo lo que tu marca necesita para verse profesional</h2>
-          <p>Podés contratar cada servicio por separado o combinarlos en un paquete.</p>
+        <div class="section-label">
+          <span class="num">01</span><span class="name">Páginas web</span><span class="rule"></span>
+          <a href="#ideas" class="back-link">↑ <span class="hide-sm">Volver a las </span>ideas</a>
         </div>
-
-        <div class="cards">
-          <article class="card">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="14" rx="2"/><path d="M2.5 8h19M8 21h8M12 18v3"/></svg>
-            </div>
-            <h3>Páginas web</h3>
-            <p>Sitios modernos, rápidos y adaptados a celulares para emprendimientos, pequeñas y medianas empresas.</p>
+        <div class="service-grid">
+          <figure class="service-media" data-parallax="0.06">
+            <img src="assets/img/web.svg" alt="Ilustración de una página web en computadora y celular" width="640" height="480" loading="lazy">
+          </figure>
+          <div class="service-text">
+            <h2>Páginas web que trabajan por tu negocio</h2>
+            <p class="service-lead">Diseñamos sitios modernos, rápidos y pensados para celulares, para que tus clientes te encuentren, confíen en vos y te escriban.</p>
             <ul class="checklist">
               <li>Landing pages y sitios institucionales</li>
               <li>Catálogos de productos y tiendas online</li>
@@ -110,14 +186,26 @@
               <li>Optimización para Google (SEO básico)</li>
               <li>Dominio y publicación incluidos</li>
             </ul>
-          </article>
+            <a href="#contacto" class="btn" data-service="Página web">Quiero mi página web</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <article class="card card-featured">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-            </div>
-            <h3>Contenido para redes</h3>
-            <p>Imágenes y reels para Instagram que comunican tu marca y atraen a tus clientes ideales.</p>
+    <!-- ============ 02 CONTENIDO PARA REDES ============ -->
+    <section class="section service service-reverse section-alt" id="redes">
+      <div class="container">
+        <div class="section-label">
+          <span class="num">02</span><span class="name">Contenido para redes</span><span class="rule"></span>
+          <a href="#ideas" class="back-link">↑ <span class="hide-sm">Volver a las </span>ideas</a>
+        </div>
+        <div class="service-grid">
+          <figure class="service-media" data-parallax="0.06">
+            <img src="assets/img/redes.svg" alt="Ilustración de un perfil de Instagram con publicaciones y un reel" width="640" height="480" loading="lazy">
+          </figure>
+          <div class="service-text">
+            <h2>Contenido que hace que te elijan</h2>
+            <p class="service-lead">Imágenes y reels para Instagram con una estética coherente, que muestran lo que hacés y conectan con tu público.</p>
             <ul class="checklist">
               <li>Posteos y carruseles diseñados</li>
               <li>Edición de reels y videos cortos</li>
@@ -125,14 +213,26 @@
               <li>Calendario de publicaciones mensual</li>
               <li>Textos (copys) y hashtags sugeridos</li>
             </ul>
-          </article>
+            <a href="#contacto" class="btn" data-service="Contenido para redes">Quiero contenido para redes</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <article class="card">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.8-.9 1.8-1.8 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8Z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></svg>
-            </div>
-            <h3>Identidad de marca</h3>
-            <p>Paquetes gráficos completos para que tu marca sea reconocible y coherente en todos lados.</p>
+    <!-- ============ 03 IDENTIDAD DE MARCA ============ -->
+    <section class="section service section-dark" id="marca">
+      <div class="container">
+        <div class="section-label">
+          <span class="num">03</span><span class="name">Identidad de marca</span><span class="rule"></span>
+          <a href="#ideas" class="back-link">↑ <span class="hide-sm">Volver a las </span>ideas</a>
+        </div>
+        <div class="service-grid">
+          <figure class="service-media" data-parallax="0.06">
+            <img src="assets/img/marca.svg" alt="Ilustración de un tablero de marca con logo, paleta de colores, tipografía y tarjeta personal" width="640" height="480" loading="lazy">
+          </figure>
+          <div class="service-text">
+            <h2>Una identidad que se recuerda</h2>
+            <p class="service-lead">Creamos el paquete gráfico completo de tu marca para que se vea profesional y reconocible en cada lugar donde aparezca.</p>
             <ul class="checklist">
               <li>Diseño de logo y sus variantes</li>
               <li>Paleta de colores</li>
@@ -140,16 +240,20 @@
               <li>Piezas visuales: tarjetas, flyers, etiquetas</li>
               <li>Manual de marca para usar en todo</li>
             </ul>
-          </article>
+            <a href="#contacto" class="btn" data-service="Identidad de marca">Quiero mi identidad de marca</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ PAQUETES ============ -->
+    <!-- ============ 04 PAQUETES ============ -->
     <section class="section section-alt" id="paquetes">
       <div class="container">
+        <div class="section-label">
+          <span class="num">04</span><span class="name">Paquetes</span><span class="rule"></span>
+          <a href="#ideas" class="back-link">↑ <span class="hide-sm">Volver a las </span>ideas</a>
+        </div>
         <div class="section-head">
-          <p class="eyebrow">Paquetes</p>
           <h2>Elegí el punto de partida ideal para tu negocio</h2>
           <p>Cada paquete se adapta a lo que necesitás. Escribinos y armamos una propuesta a medida.</p>
         </div>
@@ -165,7 +269,7 @@
               <li>Kit de 6 plantillas para Instagram</li>
               <li>Portadas de historias destacadas</li>
             </ul>
-            <a href="#contacto" class="btn btn-ghost btn-block" data-plan="Marca Inicial">Consultar este paquete</a>
+            <a href="#contacto" class="btn btn-ghost btn-block" data-service="Paquete Marca Inicial">Consultar este paquete</a>
           </article>
 
           <article class="plan plan-featured">
@@ -180,7 +284,7 @@
               <li>Botón de WhatsApp y formulario</li>
               <li>Manual de marca</li>
             </ul>
-            <a href="#contacto" class="btn btn-block" data-plan="Presencia Digital">Consultar este paquete</a>
+            <a href="#contacto" class="btn btn-block" data-service="Paquete Presencia Digital">Consultar este paquete</a>
           </article>
 
           <article class="plan">
@@ -193,17 +297,20 @@
               <li>4 reels editados por mes</li>
               <li>Copys y hashtags</li>
             </ul>
-            <a href="#contacto" class="btn btn-ghost btn-block" data-plan="Redes Mensual">Consultar este paquete</a>
+            <a href="#contacto" class="btn btn-ghost btn-block" data-service="Paquete Redes Mensual">Consultar este paquete</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ PROCESO ============ -->
-    <section class="section" id="proceso">
+    <!-- ============ 05 PROCESO ============ -->
+    <section class="section section-dark" id="proceso">
       <div class="container">
+        <div class="section-label">
+          <span class="num">05</span><span class="name">Cómo trabajamos</span><span class="rule"></span>
+          <a href="#ideas" class="back-link">↑ <span class="hide-sm">Volver a las </span>ideas</a>
+        </div>
         <div class="section-head">
-          <p class="eyebrow">Cómo trabajamos</p>
           <h2>Un proceso simple, de la idea al lanzamiento</h2>
         </div>
 
@@ -240,11 +347,16 @@
       </div>
     </section>
 
-    <!-- ============ PREGUNTAS FRECUENTES ============ -->
-    <section class="section" id="preguntas">
+    <!-- ============ 06 PREGUNTAS FRECUENTES ============ -->
+    <section class="section section-dark" id="preguntas">
+      <div class="container">
+        <div class="section-label">
+          <span class="num">06</span><span class="name">Preguntas frecuentes</span><span class="rule"></span>
+          <a href="#ideas" class="back-link">↑ <span class="hide-sm">Volver a las </span>ideas</a>
+        </div>
+      </div>
       <div class="container narrow">
         <div class="section-head">
-          <p class="eyebrow">Preguntas frecuentes</p>
           <h2>Lo que más nos consultan</h2>
         </div>
 
@@ -273,11 +385,16 @@
       </div>
     </section>
 
-    <!-- ============ CONTACTO ============ -->
+    <!-- ============ 07 CONTACTO ============ -->
     <section class="section section-alt" id="contacto">
+      <div class="container">
+        <div class="section-label">
+          <span class="num">07</span><span class="name">Contacto</span><span class="rule"></span>
+          <a href="#ideas" class="back-link">↑ <span class="hide-sm">Volver a las </span>ideas</a>
+        </div>
+      </div>
       <div class="container contact-grid">
         <div class="contact-info">
-          <p class="eyebrow">Contacto</p>
           <h2>Contanos sobre tu proyecto</h2>
           <p>Completá el formulario y te respondemos por WhatsApp a la brevedad. También podés escribirnos directo:</p>
 

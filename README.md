@@ -11,6 +11,7 @@ index.html        → contenido de la página (textos, secciones)
 css/styles.css    → diseño y colores
 js/main.js        → número de WhatsApp, menú móvil y formulario
 assets/favicon.svg→ ícono de la pestaña del navegador
+assets/img/       → ilustraciones de cada servicio
 ```
 
 ## Qué personalizar
@@ -22,6 +23,7 @@ assets/favicon.svg→ ícono de la pestaña del navegador
 | Email e Instagram | `index.html`, sección `#contacto` |
 | Colores | `css/styles.css` → variables en `:root` |
 | Precios de los paquetes | `index.html`, sección `#paquetes` (`plan-price`) |
+| Imágenes de cada servicio | Reemplazá `assets/img/web.svg`, `redes.svg` y `marca.svg` por tus fotos (por ejemplo `web.jpg`) y cambiá el nombre en `index.html` |
 
 ## Publicar en GitHub Pages
 
