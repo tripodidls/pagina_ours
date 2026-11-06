@@ -36,38 +36,46 @@ const setMenu = (open) => {
 toggle.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
 menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
 
-/* ---------- Botones que preseleccionan el servicio en el formulario ---------- */
-const select = document.getElementById("servicio");
+/* ---------- Botones de servicios: marcan esa opción en el formulario ---------- */
+const form = document.getElementById("contact-form");
+const error = document.getElementById("form-error");
+
 document.querySelectorAll("[data-service]").forEach((btn) =>
   btn.addEventListener("click", () => {
-    select.value = btn.dataset.service;
+    const box = form.querySelector(`input[name="servicios"][value="${btn.dataset.service}"]`);
+    if (box) box.checked = true;
   })
 );
 
 /* ---------- Formulario -> mensaje de WhatsApp ---------- */
-const form = document.getElementById("contact-form");
-const error = document.getElementById("form-error");
+const checked = (name) =>
+  [...form.querySelectorAll(`input[name="${name}"]:checked`)].map((i) => i.value);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const data = Object.fromEntries(new FormData(form));
-  const nombre = (data.nombre || "").trim();
-  const servicio = data.servicio || "";
+  const nombre = form.nombre.value.trim();
+  const negocio = form.negocio.value.trim();
+  const servicios = checked("servicios");
+  const actual = checked("actual");
+  const plazo = form.plazo.value;
+  const mensaje = form.mensaje.value.trim();
 
   form.nombre.classList.toggle("invalid", !nombre);
-  form.servicio.classList.toggle("invalid", !servicio);
+  form.querySelector(".chips-field").classList.toggle("invalid", !servicios.length);
 
-  if (!nombre || !servicio) {
+  if (!nombre || !servicios.length) {
     error.hidden = false;
     return;
   }
   error.hidden = true;
 
   const lineas = [
-    `¡Hola! Soy ${nombre}.`,
-    data.negocio?.trim() && `Mi emprendimiento/empresa: ${data.negocio.trim()}.`,
-    `Me interesa: ${servicio}.`,
-    data.mensaje?.trim() && `\n${data.mensaje.trim()}`,
+    `¡Hola! Soy ${nombre} y quiero pedir un presupuesto personalizado.`,
+    negocio && `• Mi emprendimiento: ${negocio}`,
+    `• Estoy buscando: ${servicios.join(", ")}`,
+    actual.length && `• Hoy tengo: ${actual.join(", ")}`,
+    plazo && `• Lo necesito: ${plazo}`,
+    mensaje && `\n${mensaje}`,
   ].filter(Boolean);
 
   window.open(waLink(lineas.join("\n")), "_blank", "noopener");
@@ -185,7 +193,7 @@ ideaNodes.forEach((node) => {
 
 /* ---------- Animaciones de aparición ---------- */
 const revealTargets = document.querySelectorAll(
-  ".section-label, .section-head, .service-text, .plan, .steps li, .faq details, .contact-info, .contact-form, .cta-inner"
+  ".section-label, .section-head, .service-text, .custom-intro, .custom-card, .steps li, .faq details, .contact-info, .contact-form, .cta-inner"
 );
 
 if ("IntersectionObserver" in window && !reduceMotion) {
